@@ -112,7 +112,7 @@ class _BookingCalendarMainState extends State<BookingCalendarMain> {
     controller.selectFirstDayByHoliday(startOfDay, endOfDay);
   }
 
-  CalendarFormat _calendarFormat = CalendarFormat.twoWeeks;
+  CalendarFormat _calendarFormat = CalendarFormat.month;
 
   late DateTime _selectedDay;
   late DateTime _focusedDay;
