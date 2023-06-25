@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:booking_calendar/booking_calendar.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:table_calendar/table_calendar.dart' as table_calendar;
 
 void main() {
   initializeDateFormatting()
@@ -91,6 +92,7 @@ class _BookingCalendarDemoAppState extends State<BookingCalendarDemoApp> {
           ),
           body: Center(
             child: BookingCalendar(
+              availableCalendarFormats: const {table_calendar.CalendarFormat.month: 'Month'},
               bookingService: mockBookingService,
               convertStreamResultToDateTimeRanges: convertStreamResultMock,
               getBookingStream: getBookingStreamMock,
